@@ -1,0 +1,23 @@
+{
+  "name": "shenzhen-uav-digital-twin",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "prebuild": "node scripts/check-twin-assets.mjs",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "verify": "node scripts/verify-greenroute-drone.mjs"
+  },
+  "dependencies": {
+    "@babylonjs/core": "^8.0.0",
+    "@babylonjs/loaders": "^8.0.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.55.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  }
+}
